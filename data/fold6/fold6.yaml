@@ -1,0 +1,6 @@
+train: /home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/fold6/train
+val: /home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/fold6/val
+test: /home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/fold6/test
+
+nc: 1
+names: ['fire']

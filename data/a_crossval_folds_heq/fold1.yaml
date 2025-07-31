@@ -1,0 +1,6 @@
+train: /home/sarantidis/fire_vol_2.2/a_crossval_folds_heq/fold1/train
+val: /home/sarantidis/fire_vol_2.2/a_crossval_folds_heq/fold1/val
+test: /home/sarantidis/fire_vol_2.2/a_crossval_folds_heq/fold1/test
+
+nc: 1
+names: ['smoke']
