@@ -3,9 +3,9 @@ import shutil
 from sklearn.model_selection import KFold, train_test_split
 
 #  CHANGE THESE PATHS 
-images_folder = 'grayscale_output'  # Folder containing grayscale images
+images_folder = 'images'  # Directory containing grayscale images
 labels_folder = 'labels'
-output_base_folder = 'crossval_folds_grayscale'
+output_base_folder = 'crossval_folds'
 
 #  Create list of all image filenames (without extension) 
 image_ids = [f.replace('.jpg', '') for f in os.listdir(images_folder) if f.endswith('.jpg')]
@@ -61,7 +61,7 @@ import yaml  # Make sure PyYAML is installed
 
 # Number of classes and class names
 nc = 1
-class_names = ["fire"]
+class_names = ["smoke"]
 
 output_base_folder = 'crossval_folds_from_excel'  # Same as before
 

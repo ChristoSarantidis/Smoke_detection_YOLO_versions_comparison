@@ -2,7 +2,7 @@ import os
 import re
 
 # Folder containing the annotation files
-annotation_folder = 'C:/Users/ionio/Desktop/fire_vol2.2/smoke_camera/all/images'
+annotation_folder = '../all/images'
 output_file = 'added_numbers.txt'
 
 renamed_files = []

@@ -2,7 +2,7 @@ import os
 import cv2
 
 # Step 1: Set the path
-input_folder = 'C:/Users/ionio/Desktop/fire_vol2.2/smoke_camera/all/images'  # Change this to your folder name
+input_folder = '.../images'  # Change this to your folder name
 output_folder = os.path.join(input_folder, 'heq')
 
 # Step 2: Create output folder if it doesn't exist

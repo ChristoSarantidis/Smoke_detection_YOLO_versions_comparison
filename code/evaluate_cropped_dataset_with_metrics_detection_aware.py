@@ -9,10 +9,10 @@ import yaml
 import time
 
 # === CONFIGURATION ===
-BASE_DIR = "/home/sarantidis/fire_vol_2.2/runs_crossval/3_h_a/"
-DATASET_DIR = "/home/sarantidis/fire_vol_2.2/a_crossval_folds_heq/" #dataset heq or normal
+BASE_DIR = "dir"  # directory where trained model folders are
+DATASET_DIR = "dir" # dataset heq or normal
 
-CROPPED_DATASET_DIR = "/home/sarantidis/fire_vol_2.2/datasets/cropped_eval_dataset" ### DO NOT CHANGE
+CROPPED_DATASET_DIR = "....cropped_eval_dataset" # output directory for cropped images
 IMAGE_SIZE = 640
 OUTPUT_CSV = "cropped_eval_metrics.csv"
 

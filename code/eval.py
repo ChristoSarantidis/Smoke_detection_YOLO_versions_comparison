@@ -5,8 +5,8 @@ import pandas as pd
 from ultralytics import YOLO
 
 # === CONFIGURATION ===
-BASE_DIR = "/home/sarantidis/fire_vol_2.2/runs_crossval/v13_80_epochs"  # where trained model folders are
-DATASET_DIR = "/home/sarantidis/fire_vol_2.2/crossval_folds/"  # where fold YAMLs and datasets are
+BASE_DIR = "dir"  # directory where trained model folders are
+DATASET_DIR = "dir"  # directory where fold YAMLs and datasets are
 
 
 ################################################################################################yolov13
@@ -56,7 +56,7 @@ df = pd.DataFrame(results)
 df.to_csv(OUTPUT_CSV, index=False)
 print(f"\n✅ Test results saved to {OUTPUT_CSV}")
 print(df)
-'''
+
 ################################################################################################yolov12
 OUTPUT_CSV = "test_eval_metricsv12.csv"
 TARGET_ALGORITHM = "yolov12"  # change this to yolov10, yolov12, etc.
@@ -246,4 +246,3 @@ df = pd.DataFrame(results)
 df.to_csv(OUTPUT_CSV, index=False)
 print(f"\n✅ Test results saved to {OUTPUT_CSV}")
 print(df)
-'''

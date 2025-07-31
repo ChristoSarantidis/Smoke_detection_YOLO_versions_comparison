@@ -12,7 +12,7 @@ import matplotlib.ticker as mticker
 import csv
 
 # === Parameters ===
-val_images_dir = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/fold6/test/images"
+val_images_dir = ".../fold6/test/images" # directory containing images
 crop_scales = [ 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0]
 image_size = 640
 padding_ratio = 0.2  # Expand detection bounding box by 20%
@@ -22,7 +22,7 @@ image_paths = glob(os.path.join(val_images_dir, "*.jpg"))
 
 ###############################################################################################yolov13
 # === Load model ===
-model_path = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/runs/detect/train0/weights/best.pt"
+model_path = ".../weights/best.pt"
 model = YOLO(model_path)
 
 log_rows = []
@@ -115,10 +115,10 @@ plt.show()
 max_index = np.argmax(average_confidences)
 best_crop_percentage = crop_scales[max_index] * 100
 print(f"\n✅ Best crop percentage: {best_crop_percentage:.1f}% with average confidence: {average_confidences[max_index]:.4f}")
-'''
+
 ###############################################################################################yolov12
 # === Load model ===
-model_path = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/runs/detect/train1/weights/best.pt"
+model_path = ".../weights/best.pt"
 model = YOLO(model_path)
 log_rows = []
 model_name = "YOLOv12nano"
@@ -209,10 +209,10 @@ max_index = np.argmax(average_confidences)
 best_crop_percentage = crop_scales[max_index] * 100
 print(f"\n✅ Best crop percentage: {best_crop_percentage:.1f}% with average confidence: {average_confidences[max_index]:.4f}")
 
-'''
+
 ###############################################################################################yolov11
 # === Load model ===
-model_path = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/runs/detect/train2/weights/best.pt"
+model_path = ".../weights/best.pt"
 model = YOLO(model_path)
 
 log_rows = []
@@ -307,7 +307,7 @@ print(f"\n✅ Best crop percentage: {best_crop_percentage:.1f}% with average con
 
 ###############################################################################################yolov10
 # === Load model ===
-model_path = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/runs/detect/train3/weights/best.pt"
+model_path = ".../weights/best.pt"
 model = YOLO(model_path)
 
 log_rows = []
@@ -403,7 +403,7 @@ print(f"\n✅ Best crop percentage: {best_crop_percentage:.1f}% with average con
 
 ###############################################################################################yolov9tiny
 # === Load model ===
-model_path = "/home/sarantidis/fire_vol_2.2/optimal_percentage_for_crop/runs/detect/train4/weights/best.pt"
+model_path = ".../weights/best.pt"
 model = YOLO(model_path)
 
 log_rows = []
@@ -494,20 +494,3 @@ plt.show()
 max_index = np.argmax(average_confidences)
 best_crop_percentage = crop_scales[max_index] * 100
 print(f"\n✅ Best crop percentage: {best_crop_percentage:.1f}% with average confidence: {average_confidences[max_index]:.4f}")
-'''
-
-
-
-
-
-'''#initial plot function
-# === Plot results ===
-plt.figure(figsize=(10, 6))
-plt.plot([int(s * 100) for s in crop_scales], average_confidences, marker='o')
-plt.xlabel("Crop size (% of original)")
-plt.ylabel("Average confidence")
-plt.title("Detection-Aware Average Confidence vs Crop Percentage")
-plt.grid(True)
-plt.tight_layout()
-plt.savefig("detection_aware_confidence_vs_crop.png")
-plt.show()
