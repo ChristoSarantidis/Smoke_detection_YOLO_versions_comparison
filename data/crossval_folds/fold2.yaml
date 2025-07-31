@@ -1,6 +1,0 @@
-train: /home/sarantidis/fire_vol_2.2/crossval_folds/fold2/train
-val: /home/sarantidis/fire_vol_2.2/crossval_folds/fold2/val
-test: /home/sarantidis/fire_vol_2.2/crossval_folds/fold2/test
-
-nc: 1
-names: ['smoke']
